@@ -13,6 +13,11 @@ public class CentroEducativo {
         this.alumnos.add(a);
     }
 
+    public void verAlumnos(){
+        for (Alumno alumno: alumnos) {
+            System.out.println(alumno.toString());
+        }
+    }
     public int cantAprobados(){
         int cant=0;
         for (Alumno alumno: alumnos) {

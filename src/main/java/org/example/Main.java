@@ -4,14 +4,65 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
+        String nombre;
+        String apellido;
+        String DNI;
 
+        Scanner scanner = new Scanner(System.in);
+        CentroEducativo centroEducativo = new CentroEducativo();
+
+
+        while(scanner.hasNext()){
+
+//            eleccion = scanner.nextLine();
+            String eleccion = scanner.nextLine();
+            if(eleccion.equals("fin")){
+                break;
+            }
+
+            if(eleccion.equals("agregar")){
+                System.out.println("Agregar Alumno");
+                System.out.println("Ingresar nombre");
+                nombre = scanner.nextLine();
+                System.out.println("Ingresar apellido");
+                apellido = scanner.nextLine();
+                System.out.println("Ingresar DNI");
+                DNI = scanner.nextLine();
+                Alumno nuevoAlumno = new Alumno(nombre,apellido,DNI);
+                centroEducativo.agregarAlumno(nuevoAlumno);
+                System.out.println(nuevoAlumno.toString());
+            }
+
+            if(eleccion.equals("centro")){
+                centroEducativo.verAlumnos();
+            }
+
+
+        }
+
+        /*
+        while(!eleccion.equals("fin")){
+            eleccion = scanner.nextLine();
+            if(eleccion.equals("agregar")){
+                System.out.println("Agregar Alumno");
+                System.out.println("Ingresar nombre");
+                nombre = scanner.nextLine();
+                System.out.println("Ingresar apellido");
+                apellido = scanner.nextLine();
+                System.out.println("Ingresar DNI");
+                DNI = scanner.nextLine();
+                Alumno nuevoAlumno = new Alumno(nombre,apellido,DNI);
+                System.out.println(nuevoAlumno.toString());
+            }
+        }*/
+
+        /*
         String nombre;
         String apellido;
         String DNI;
 
         Scanner scanner = new Scanner(System.in);
         String choice = scanner.nextLine().toUpperCase();
-
 
         while(!choice.equals("QUIT")) {
             String opcion = scanner.nextLine().toUpperCase();
@@ -32,7 +83,7 @@ public class Main {
             choice = scanner.nextLine().toUpperCase();
 
         }
-
+*/
         /*
 
         CentroEducativo c = new CentroEducativo();
