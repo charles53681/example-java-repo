@@ -17,7 +17,7 @@ public class Main {
             String opcion = scanner.nextLine().toUpperCase();
 
             if(opcion.equals("AGREGAR")){
-                System.out.println("ngresar un Alumno");
+                System.out.println("Ingresar un Alumno");
                 System.out.println("Ingresar nombre");
                 nombre= scanner.next();
                 System.out.println("Ingresar apellido");
@@ -28,9 +28,6 @@ public class Main {
                 System.out.println(nuevoAlumno.toString());
                 choice = scanner.nextLine().toUpperCase();
             }
-
-
-
 
             choice = scanner.nextLine().toUpperCase();
 
